@@ -1,3 +1,128 @@
-.main > .asd > .sdasd {
+$primary-color: #6A1B9A;
+$primary-text: rgba(255, 255, 255, 0.95);
+$primary-l-color: #9c4dcc;
+$primary-d-color: #38006b;
+.header {
+  position: relative;
+  height: 80px;
+  box-shadow: 0 0 3px 3px #eee;
+  background-color: $primary-color;
+  .container {
+    display: flex;
+    align-items: center;
+    height: 80px;
+    flex-direction: row;
 
+    .toggle{
+      cursor: pointer;
+      padding: 0 1rem;
+      img {
+        width: 24px;
+        height: 24px;
+      }
+    }
+
+    .brand {
+      flex-grow: 1;
+      padding: 0 1rem;
+      h1 {
+        margin: 0;
+        font-size: 1.25rem;
+        font-weight: bold;
+        a {
+          color: $primary-text;
+        }
+      }
+    }
+    .main-menu {
+      position: absolute;
+      top: 80px;
+      background-color: $primary-d-color;
+      width: 100%;
+      left: 0;
+      right: 0;
+
+      padding: 0;
+      flex-grow: 1;
+      display: none;
+      justify-content: center;
+      list-style: none;
+      margin: 0;
+
+      li {
+        &:hover {
+          background-color: $primary-l-color;
+        }
+        a {
+          display: block;
+          padding: 1.5rem 1rem;
+          color: $primary-text;
+        }
+      }
+    }
+    .cart {
+      cursor: pointer;
+      padding: 0 0.5rem;
+      display: flex;
+      list-style: none;
+      margin: 0;
+      img {
+        width: 24px;
+      }
+    }
+
+    .login {
+      cursor: pointer;
+      padding: 0 0.5rem;
+      a {
+        display: block;
+        border: 0;
+        border-radius: 0.5rem;
+        font-size: 1rem;
+        color: $primary-text;
+
+        span{
+          display: none;
+        }
+        img {
+          display: block;
+          width: 24px;
+          height: 24px;
+        }
+      }
+    }
+  }
+}
+.main {
+  padding-top: 4rem ;
+  padding-bottom: 4rem ;
+}
+
+
+@media (min-width: 768px) {
+  .header {
+    .container {
+      flex-direction: row;
+      .brand {
+        flex-grow: unset;
+      }
+      .main-menu {
+        padding: 1rem;
+        display: flex;
+      }
+      .login {
+        padding: 0 1rem;
+        a {
+          padding: 0.5rem 1rem;
+          border:1px solid  $primary-text;
+          span{
+            display: block;
+          }
+          img {
+            display: none;
+          }
+        }
+      }
+    }
+  }
 }
