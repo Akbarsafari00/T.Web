@@ -38,7 +38,6 @@ $primary-d-color: #38006b;
       position: absolute;
       top: 80px;
       background-color: $primary-d-color;
-      width: 100%;
       left: 0;
       right: 0;
 
@@ -107,7 +106,9 @@ $primary-d-color: #38006b;
         flex-grow: unset;
       }
       .main-menu {
-        padding: 1rem;
+        position: unset;
+        background-color: unset;
+        padding:  0 1rem;
         display: flex;
       }
       .login {
