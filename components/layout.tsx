@@ -1,8 +1,22 @@
 import Head from 'next/head'
 import Header from './header'
 import Image from 'next/image'
+import {redirect} from "next/dist/next-server/server/api-utils";
+import Router from "next/router";
+import { useEffect, useState } from "react";
 
 export default function Layout(props:any) {
+
+    useEffect(()=>{
+        var token = localStorage.getItem("token");
+        var user = localStorage.getItem("user");
+        if (user===null || token===null){
+            Router.push("/auth/login");
+        }
+    });
+
+
+
   return (
     <div  dir="rtl">
       <Head>
