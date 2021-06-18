@@ -1,0 +1,15 @@
+.widget-layout {
+  .title{
+    display: flex;
+    align-items: center;
+    font-size: 1.138rem;;
+    font-weight: 600;
+    height: 32px;
+    margin: 0;
+    padding: 0 1rem;
+    border-right: 5px solid #ddd;
+  }
+  .body {
+    padding:2rem  1rem;
+  }
+}

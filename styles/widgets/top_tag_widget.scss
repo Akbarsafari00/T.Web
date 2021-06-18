@@ -1,0 +1,21 @@
+.top-tag-widget {
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    li {
+      a {
+        display: block;
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+        border: 1px solid #eee;
+        margin-left: 0.5rem;
+        border-radius: 0.5rem;
+        margin-bottom: 1rem;
+      }
+    }
+  }
+}

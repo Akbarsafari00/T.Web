@@ -1,22 +1,26 @@
-
 $primary-text: rgba(0, 0, 0, 0.6);
 
 @import "article/article-card";
+@import "widgets/widget_layout";
+@import "widgets/top_tag_widget";
 
 .header {
   position: relative;
-  .top-header{
+
+  .top-header {
     height: 100px;
   }
+
   .container {
     display: flex;
     align-items: center;
 
     flex-direction: row;
 
-    .toggle{
+    .toggle {
       cursor: pointer;
       padding: 0 1rem;
+
       img {
         width: 24px;
         height: 24px;
@@ -26,16 +30,19 @@ $primary-text: rgba(0, 0, 0, 0.6);
     .brand {
       flex-grow: 1;
       padding: 0 1rem;
+
       h1 {
         margin: 0;
         font-size: 1.25rem;
         font-weight: bold;
         color: #444;
+
         img {
           width: 80px;
         }
       }
     }
+
     .top-menu {
       position: absolute;
       top: 80px;
@@ -56,64 +63,77 @@ $primary-text: rgba(0, 0, 0, 0.6);
           display: block;
           padding: 1.5rem 1rem;
           color: $primary-text;
-
+          font-weight: 600;
           &:hover {
             color: rgba(0, 0, 0, 0.8);
           }
         }
       }
     }
+
     .cart {
       cursor: pointer;
       padding: 0 0.5rem;
-      display: flex;
+      display: none;
       list-style: none;
       margin: 0;
+
       img {
         width: 24px;
       }
     }
 
-    .login {
-      cursor: pointer;
-      padding: 0 0.5rem;
-      a {
+    .action {
+      display: flex;
+
+      .login {
+        cursor: pointer;
         display: block;
-        border: 0;
+        padding: 0.5rem 1rem;
         border-radius: 0.5rem;
         font-size: 1rem;
         color: $primary-text;
 
-        span{
-          display: none;
-        }
-        img {
-          display: block;
-          width: 24px;
-          height: 24px;
-        }
       }
+      .register {
+        margin-right: 0.5rem;
+        cursor: pointer;
+        padding: 0.5rem 1rem;
+        border: 1px solid $primary-text;
+        display: block;
+        border-radius: 0.5rem;
+        font-size: 1rem;
+        color: $primary-text;
+
+
+      }
+
     }
 
     .main-menu {
+      height: 80px;
       display: flex;
+      align-items: center;
       list-style: none;
       padding: 0;
       margin: 0;
       width: 100%;
-      border-bottom: 1px solid #eee;
+      border-bottom: 1px solid #ccc;
+
       li {
         a {
-          display: block; padding: 1rem;
+          display: block;
+          padding: 1rem;
           color: #777;
         }
       }
     }
   }
 }
+
 .main {
-  padding-top: 4rem ;
-  padding-bottom: 4rem ;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
 }
 
 
@@ -121,29 +141,20 @@ $primary-text: rgba(0, 0, 0, 0.6);
   .header {
     .container {
       flex-direction: row;
+
       .brand {
         flex-grow: unset;
       }
+
       .top-menu {
 
         position: unset;
         background-color: unset;
-        padding:  0 1rem;
+        padding: 0 1rem;
         display: flex;
       }
-      .login {
-        padding: 0 1rem;
-        a {
-          padding: 0.5rem 1rem;
-          border:1px solid  $primary-text;
-          span{
-            display: block;
-          }
-          img {
-            display: none;
-          }
-        }
-      }
+
+
 
     }
   }
